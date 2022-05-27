@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
+import { NavLink } from "react-router-dom";
 
 function Header(props) {
   const { sections, title } = props;
@@ -29,20 +29,27 @@ function Header(props) {
         sx={{ justifyContent: "space-between", overflowX: "auto" }}
       >
         {sections.map((section) => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            {section.title}
-          </Link>
+          <NavLink key={section.title} to={section.url}>
+            <span>{section.title}</span>
+          </NavLink>
         ))}
       </Toolbar>
     </React.Fragment>
   );
+}
+
+{
+  /* 
+          <Link
+              color="inherit"
+              noWrap
+              variant="body2"
+              href={section.url}
+              sx={{ p: 1, flexShrink: 0 }}
+            >
+              {section.title}
+            </Link>
+        */
 }
 
 Header.propTypes = {
