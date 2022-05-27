@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { NavLink } from "react-router-dom";
+import { Grid } from "@mui/material";
 
 function Header(props) {
   const { sections, title } = props;
@@ -28,28 +29,25 @@ function Header(props) {
         variant="dense"
         sx={{ justifyContent: "space-between", overflowX: "auto" }}
       >
-        {sections.map((section) => (
-          <NavLink key={section.title} to={section.url}>
-            <span>{section.title}</span>
-          </NavLink>
-        ))}
+        <Grid container>
+          {sections.map((section) => (
+            <Grid
+              item
+              key={section.title}
+              xs={12}
+              sm={6}
+              md={3}
+              sx={{ textAlign: "center" }}
+            >
+              <NavLink to={section.url}>
+                <span>{section.title}</span>
+              </NavLink>
+            </Grid>
+          ))}
+        </Grid>
       </Toolbar>
     </React.Fragment>
   );
-}
-
-{
-  /* 
-          <Link
-              color="inherit"
-              noWrap
-              variant="body2"
-              href={section.url}
-              sx={{ p: 1, flexShrink: 0 }}
-            >
-              {section.title}
-            </Link>
-        */
 }
 
 Header.propTypes = {

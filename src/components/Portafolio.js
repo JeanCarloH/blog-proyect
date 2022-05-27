@@ -18,24 +18,25 @@ function Portafolio() {
   const featuredPosts = [
     {
       title: "App web contabilidad",
-      date: "Nov 12",
+      date: "2020",
       description:
-        "App web desarrollada por Juan David Marulanda y Juan Camilo Muñoz usando Laravel",
+        "App web desarrollada por Juan David Marulanda y Juan Camilo Muñoz usando Laravel 💰.",
       image: ImageEximo,
       imageLabel: "Imagen aplicación contabilidad",
     },
     {
       title: "App web guardería canina",
-      date: "Nov 11",
+      date: "2022",
       description:
-        "App web desarrollada por Juan David Marulanda y Juan Camilo Muñoz usando VueJs y Laravel",
+        "App web desarrollada por Juan David Marulanda y Juan Camilo Muñoz usando VueJs y Laravel 🐶.",
       image: ImageNinnaytato,
       imageLabel: "Imagen guardería canina",
     },
     {
       title: "App web buscador de canciones",
-      date: "Nov 11",
-      description: "App web desarrollada por Juan Camilo Muñoz usando ReactJs",
+      date: "2022",
+      description:
+        "App web desarrollada por Juan Camilo Muñoz usando ReactJs 🎵.",
       image: ImageSongsearch,
       imageLabel: "Imagen buscador de canciones",
     },

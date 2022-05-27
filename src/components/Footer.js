@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import { Stack } from "@mui/material";
+import { Grid, Stack } from "@mui/material";
 
 function Copyright() {
   return (
@@ -28,6 +28,29 @@ function Footer(props) {
   return (
     <Box component="footer" sx={{ bgcolor: "background.paper", py: 6 }}>
       <Container maxWidth="lg">
+        <Grid container>
+          {social.map((network) => (
+            <Grid
+              item
+              xs={6}
+              md={2}
+              key={network.name}
+              sx={{ textAlign: "center" }}
+            >
+              <Link
+                display="block"
+                variant="body1"
+                href={network.url}
+                sx={{ mb: 0.5 }}
+              >
+                <Stack direction="row" spacing={1} alignItems="center">
+                  <network.icon />
+                  <span>{network.name}</span>
+                </Stack>
+              </Link>
+            </Grid>
+          ))}
+        </Grid>
         <Typography variant="h6" align="center" gutterBottom>
           {title}
         </Typography>
@@ -40,20 +63,6 @@ function Footer(props) {
           {description}
         </Typography>
         <Copyright />
-        {social.map((network) => (
-          <Link
-            display="block"
-            variant="body1"
-            href={network.url}
-            key={network.name}
-            sx={{ mb: 0.5 }}
-          >
-            <Stack direction="row" spacing={1} alignItems="center">
-              <network.icon />
-              <span>{network.name}</span>
-            </Stack>
-          </Link>
-        ))}
       </Container>
     </Box>
   );
