@@ -7,12 +7,13 @@ import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 
-function FeaturedPost(props) {
-  const { post } = props;
-
+function FeaturedPost({ post, handleOpen }) {
   return (
     <Grid item xs={12} md={6}>
-      <CardActionArea component="button">
+      <CardActionArea
+        component="button"
+        onClick={() => handleOpen(post.images)}
+      >
         <Card sx={{ display: "flex" }}>
           <CardContent sx={{ flex: 1 }}>
             <Typography component="h2" variant="h5">

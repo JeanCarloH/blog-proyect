@@ -1,4 +1,3 @@
-import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -17,6 +16,8 @@ import Portafolio from "./Portafolio";
 import Estudios from "./Estudios";
 import AcercaDeMi from "./AcercaDeMi";
 import CosasPersonales from "./CosasPersonales";
+import { useState } from "react";
+import { Box, Grid, ImageListItem, Modal } from "@mui/material";
 
 const sections = [
   { title: "Portafolio", url: "/" },
@@ -43,7 +44,31 @@ const social = [
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: "60%",
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+  overflow: "auto",
+  maxHeight: "70%",
+};
+
 export default function Blog() {
+  const [images, setImages] = useState([]);
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = (images) => {
+    setImages(images);
+    setOpen(true);
+  };
+
+  const handleClose = () => setOpen(false);
+
   return (
     <HashRouter>
       <ThemeProvider theme={theme}>
@@ -52,8 +77,16 @@ export default function Blog() {
           <Header title="Blog 💻" sections={sections} />
           <main>
             <Routes>
-              <Route exact path="/" element={<Portafolio />} />
-              <Route exact path="/estudios" element={<Estudios />} />
+              <Route
+                exact
+                path="/"
+                element={<Portafolio handleOpen={handleOpen} />}
+              />
+              <Route
+                exact
+                path="/estudios"
+                element={<Estudios handleOpen={handleOpen} />}
+              />
               <Route exact path="/acerca-de-mi" element={<AcercaDeMi />} />
               <Route
                 exact
@@ -62,6 +95,29 @@ export default function Blog() {
               />
               <Route path="*" element={Error404} />
             </Routes>
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <Box sx={style}>
+                <Grid container spacing={2} justifyContent="center">
+                  {images.map((image) => (
+                    <Grid item>
+                      <ImageListItem
+                        sx={{
+                          width: { sm: 400, md: 600 },
+                          height: { sm: 400, md: 600 },
+                        }}
+                      >
+                        <img src={image} alt={image} />
+                      </ImageListItem>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Box>
+            </Modal>
           </main>
         </Container>
         <Footer
