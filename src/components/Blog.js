@@ -16,12 +16,13 @@ import Error404 from "./Error404";
 import Portafolio from "./Portafolio";
 import Estudios from "./Estudios";
 import AcercaDeMi from "./AcercaDeMi";
+import CosasPersonales from "./CosasPersonales";
 
 const sections = [
   { title: "Portafolio", url: "/" },
   { title: "Estudios", url: "/estudios" },
   { title: "Acerca de mí", url: "/acerca-de-mi" },
-  { title: "Cosas personales", url: "#" },
+  { title: "Cosas personales", url: "/cosas-personales" },
 ];
 
 const social = [
@@ -54,6 +55,11 @@ export default function Blog() {
               <Route exact path="/" element={<Portafolio />} />
               <Route exact path="/estudios" element={<Estudios />} />
               <Route exact path="/acerca-de-mi" element={<AcercaDeMi />} />
+              <Route
+                exact
+                path="/cosas-personales"
+                element={<CosasPersonales />}
+              />
               <Route path="*" element={Error404} />
             </Routes>
           </main>

@@ -34,7 +34,7 @@ function Header(props) {
             <Grid
               item
               key={section.title}
-              xs={12}
+              xs={6}
               sm={6}
               md={3}
               sx={{ textAlign: "center" }}

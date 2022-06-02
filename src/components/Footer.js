@@ -11,6 +11,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {"Copyright © "}
       <Link
+        target="_blank"
         color="inherit"
         href="https://www.linkedin.com/in/juan-camilo-muñoz-lópez-ba287b1b4/"
       >
@@ -38,6 +39,7 @@ function Footer(props) {
               sx={{ textAlign: "center" }}
             >
               <Link
+                target="_blank"
                 display="block"
                 variant="body1"
                 href={network.url}

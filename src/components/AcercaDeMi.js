@@ -1,7 +1,29 @@
 import { Avatar, Box, Grid, Paper, Typography } from "@mui/material";
 import PhotoAvatar from "../assets/avatar.jpg";
+import BasicCard from "./BasicCard";
+import BootstrapLogo from "../assets/skills/bootstrap.png";
+import CssLogo from "../assets/skills/css.png";
+import HtmlLogo from "../assets/skills/html.png";
+import JavaLogo from "../assets/skills/java.png";
+import JqueryLogo from "../assets/skills/jquery.png";
+import JsLogo from "../assets/skills/js.png";
+import PhpLogo from "../assets/skills/php.png";
+import GithubLogo from "../assets/skills/github.png";
+import ReactLogo from "../assets/skills/react.png";
 
 function AcercaDeMi() {
+  const skills = [
+    { url: HtmlLogo, title: "HTML 5" },
+    { url: CssLogo, title: "CSS 3" },
+    { url: JsLogo, title: "JAVASCRIPT" },
+    { url: BootstrapLogo, title: "BOOTSTRAP" },
+    { url: JqueryLogo, title: "JQUERY" },
+    { url: PhpLogo, title: "PHP" },
+    { url: JavaLogo, title: "JAVA" },
+    { url: GithubLogo, title: "GITHUB" },
+    { url: ReactLogo, title: "REACT JS" },
+  ];
+
   const post = {
     title: "Juan Camilo Muñoz López",
     description:
@@ -95,6 +117,16 @@ function AcercaDeMi() {
         sistemas en la Universidad Nacional de Colombia. El trabajo y la
         disciplina es lo que me mueven para ser cada día un mejor profesional.
       </Typography>
+      <Typography variant="h4" sx={{ textAlign: "center" }}>
+        Skills
+      </Typography>
+      <Grid container spacing={4}>
+        {skills.map((skill, index) => (
+          <Grid key={index} item xs={12} md={3}>
+            <BasicCard skill={skill} />
+          </Grid>
+        ))}
+      </Grid>
     </>
   );
 }
