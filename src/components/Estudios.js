@@ -4,51 +4,88 @@ import MainFeaturedPost from "./MainFeaturedPost";
 
 function Estudios({ handleOpen }) {
   const mainFeaturedPost = {
-    title: "Juan Camilo Muñoz López",
+    title: "Jean Carlo Herrera Delgado",
     description:
       "A continuación se podrán ver diferentes documentos que certifican mi educación.",
-    image: "https://placeimg.com/1080/1620/arch",
+    image: "logoPersonal/logonuevo.png",
     imageText: "main image description",
     linkText: "Continue reading…",
   };
 
   const featuredPosts = [
     {
-      title: "Técnico en programación de software",
-      date: "2014 - 2016",
+      title: "Introduction to Data Science in Python",
+      date: "2021",
       description:
-        "Carrera realizada en la Institución Educativa San Cristóbal 🎓.",
-      image: "/certificados/tecnica.png",
-      imageLabel: "Imagen diploma tecnico",
-      images: ["/certificados/tecnica.png"],
+        "Course given by Michigan University through Coursera",
+      image: "/certificados/certificado1.png",
+      imageLabel: "Imagen diploma coursera",
+      images: ["/certificados/certificado1.png"],
     },
     {
-      title: "Tecnólogo en análisis y desarrollo de sistemas de información",
-      date: "2016 - 2018",
+      title: "Sistemas difusos",
+      date: "2022",
       description:
-        "Carrera realizada en el Servicio Nacional de Aprendizaje (Sena) 🎓.",
-      image: "/certificados/tecnologia.png",
-      imageLabel: "Imagen diploma tecnólogo",
-      images: ["/certificados/tecnologia.png"],
+        "Course given by Nacional University of Colombia through Coursera",
+      image: "/certificados/certificado2.png",
+      imageLabel: "Imagen diploma coursera",
+      images: ["/certificados/certificado2.png"],
     },
     {
-      title: "Curso fundamentos de programación con JavaScript, HTML y CSS",
+      title: "Programming Foundations with JavaScript, HTML and CSS",
       date: "2020",
       description:
-        "Curso de la universidad de Duke realizado a través de Coursera 🎓.",
-      image: "/certificados/coursera1.png",
+        "Course given by Duke University through Coursera",
+      image: "/certificados/certificado3.png",
       imageLabel: "Imagen diploma coursera",
-      images: ["/certificados/coursera1.png"],
+      images: ["/certificados/certificado3.png"],
     },
     {
-      title: "Curso principios de diseño de software con Java",
+      title: "Neural Networks and Deep Learning",
+      date: "2021",
+      description:
+        "Course given by DeepLearning.AI through Coursera",
+      image: "/certificados/certificado4.png",
+      imageLabel: "Imagen diploma coursera",
+      images: ["/certificados/certificado4.png"],
+    },
+    {
+      title: "Java Programming: Solving Problems with Software",
       date: "2020",
       description:
-        "Curso de la universidad de Duke realizado a través de Coursera 🎓.",
-      image: "/certificados/coursera2.png",
+        "Course given by Duke University through Coursera",
+      image: "/certificados/certificado5.png",
       imageLabel: "Imagen diploma coursera",
-      images: ["/certificados/coursera2.png"],
+      images: ["/certificados/certificado5.png"],
     },
+    {
+      title: "Deep Learning in Computer Vision",
+      date: "2021",
+      description:
+        "Course given by Higher School of Economics through Coursera",
+      image: "/certificados/certificado6.png",
+      imageLabel: "Imagen diploma coursera",
+      images: ["/certificados/certificado6.png"],
+    },
+    {
+      title: "Java Programming: Principles of Software Design",
+      date: "2020",
+      description:
+        "Course given by Duke University through Coursera",
+      image: "/certificados/certificado7.png",
+      imageLabel: "Imagen diploma coursera",
+      images: ["/certificados/certificado7.png"],
+    },
+    {
+      title: "Java Programming: Arrays, Lists, and Structured Data",
+      date: "2020",
+      description:
+        "Course given by Duke University through Coursera",
+      image: "/certificados/certificado8.png",
+      imageLabel: "Imagen diploma coursera",
+      images: ["/certificados/certificado8.png"],
+    },
+
   ];
 
   return (

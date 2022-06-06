@@ -11,7 +11,7 @@ export default function BasicCard({ skill }) {
         <ImageListItem
           sx={{
             width: { xs: 100, sm: 150, md: 200 },
-            height: { xs: 100, sm: 150, md: 200 },
+            height: { xs: 100, sm: 150, md: 168 },
           }}
         >
           <img alt={skill.title} src={skill.url} />

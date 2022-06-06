@@ -13,9 +13,9 @@ function Copyright() {
       <Link
         target="_blank"
         color="inherit"
-        href="https://www.linkedin.com/in/juan-camilo-muñoz-lópez-ba287b1b4/"
+        href="https://www.linkedin.com/in/jean-carlo-herrera-delgado-24273b207/"
       >
-        Juan Camilo Muñoz López
+        Jean Carlo Herrera Delgado
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}

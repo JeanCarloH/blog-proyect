@@ -1,16 +1,14 @@
 import { Grid, ImageListItem, Typography } from "@mui/material";
 import MainFeaturedPost from "./MainFeaturedPost";
 import ProgramacionImage from "../assets/cosaspersonales/programacion.jpg";
-import FutbolImage from "../assets/cosaspersonales/futbol.jpg";
-import Futbol2Image from "../assets/cosaspersonales/futbol2.jpg";
-import BoxeoImage from "../assets/cosaspersonales/boxeo.jpg";
-import HistoriaImage from "../assets/cosaspersonales/historia.jpg";
+import lolImage from "../assets/cosaspersonales/lol.jpg";
+import cbumImage from "../assets/cosaspersonales/cbum.jpg";
 
 function CosasPersonales() {
   const mainFeaturedPost = {
-    title: "Juan Camilo Muñoz López",
+    title: "Jean Carlo Herrera Delgado",
     description: "A continuación se podrán ver diferentes cosas personales 🤠.",
-    image: "https://placeimg.com/1080/1620/people",
+    image: "logoPersonal/logonuevo.png",
     imageText: "main image description",
     linkText: "Continue reading…",
   };
@@ -19,106 +17,66 @@ function CosasPersonales() {
     <>
       <MainFeaturedPost post={mainFeaturedPost} />
       <Grid container spacing={4}>
+        
+        <Grid item md={10}>
+          <Typography variant="body1" gutterBottom>
+          La programación es algo que me apasiona desde hace 5 años que comencé mis estudios en la
+          Universidad Nacional de Colombia, empecé conociendo lenguajes como java, python y progresivamente
+          fui conociendo mas lenguajes como c#, javascript y entre otros lenguajes. Actualmente apasionado
+          por React con el fin de ser uno de los mejores usando esta libreria de Javascript algun dia!
+          </Typography>
+        </Grid>
+
         <Grid item md={2}>
           <ImageListItem
             sx={{
-              width: { xs: 90, sm: 100, md: 180 },
-              height: { xs: 90, sm: 100, md: 180 },
+              width: { xs: 60, sm: 100, md: 180 },
+              height: { xs: 60, sm: 100, md: 180 },
             }}
           >
-            <img alt="Programación" src={ProgramacionImage} />
+            <img alt="Programaciónnn" src={ProgramacionImage} />
           </ImageListItem>
         </Grid>
-        <Grid item md={10}>
-          <Typography variant="body1" gutterBottom>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </Typography>
-        </Grid>
+        
         <Grid item md={8}>
           <Typography variant="body1" gutterBottom>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            Ademas de la programación también tengo otros hobbies, uno de ellos ir al GYM, es un Hobbie que 
+            practico desde hace un año, desde ahí comprendí lo importante que puede ser la disciplina 
+            y en lo que podría convertirme si era un hombre disciplinado.
           </Typography>
         </Grid>
         <Grid item md={4}>
-          <ImageListItem
+          <ImageListItem  // segunda imagen
             sx={{
               width: { xs: 90, sm: 90, md: 180 },
               height: { xs: 90, sm: 90, md: 180 },
             }}
           >
-            <img alt="Futból" src={FutbolImage} />
+            <img alt="Futból" src={cbumImage} />
           </ImageListItem>
-          <ImageListItem
-            sx={{
-              width: { xs: 90, sm: 90, md: 180 },
-              height: { xs: 90, sm: 90, md: 180 },
-            }}
-          >
-            <img alt="Futból 2" src={Futbol2Image} />
-          </ImageListItem>
+
         </Grid>
+
+        <Grid item md={10}>
+          <Typography variant="body1" gutterBottom>
+            Algo que también me apasionan son los videos juegos, disfruté muchísimo una matería de mi 
+            carrera en la cual programamos un juego llamado "smellware" este juego fue diseñado en 
+            Unity usando C# como lenguaje de programación, pero no solo me gusta programarlos. el hecho
+            de jugarlos también me apasiona, en mis tiempos libres juego League of Legends
+          </Typography>
+        </Grid>
+
         <Grid item md={2}>
           <ImageListItem
-            sx={{
+            sx={{         //tercera imagen
               width: { xs: 90, sm: 100, md: 180 },
               height: { xs: 90, sm: 100, md: 180 },
             }}
           >
-            <img alt="Historia" src={HistoriaImage} />
+            <img alt="lolImage" src={lolImage} />
           </ImageListItem>
         </Grid>
-        <Grid item md={10}>
-          <Typography variant="body1" gutterBottom>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </Typography>
-        </Grid>
-        <Grid item md={10}>
-          <Typography variant="body1" gutterBottom>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </Typography>
-        </Grid>
-        <Grid item md={2}>
-          <ImageListItem
-            sx={{
-              width: { xs: 90, sm: 90, md: 150 },
-              height: { xs: 90, sm: 90, md: 150 },
-            }}
-          >
-            <img alt="Boxeo" src={BoxeoImage} />
-          </ImageListItem>
-        </Grid>
+
       </Grid>
     </>
   );

@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
+
 function MainFeaturedPost(props) {
   const { post } = props;
 
@@ -40,17 +41,18 @@ function MainFeaturedPost(props) {
         }}
       />
       <Grid container>
-        <Grid item md={8}>
+        <Grid item md={8} >
           <Box
             sx={{
               position: "relative",
-              p: { xs: 3, md: 6 },
+              p: { xs: 3, md: 12 },
               pr: { md: 0 },
             }}
           >
             <Typography
               component="h1"
-              variant="h3"
+              variant="h4"
+              text-align= "left"  //como poner texto a la izq
               color="inherit"
               style={{ backgroundColor: "#00000085" }}
               gutterBottom
@@ -65,6 +67,8 @@ function MainFeaturedPost(props) {
             >
               {post.description}
             </Typography>
+
+
           </Box>
         </Grid>
       </Grid>

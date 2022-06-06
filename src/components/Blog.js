@@ -20,7 +20,7 @@ import { useState } from "react";
 import { Box, Grid, ImageListItem, Modal } from "@mui/material";
 
 const sections = [
-  { title: "Portafolio", url: "/" },
+  { title: "Portafolio", url: "/portafolio" },
   { title: "Estudios", url: "/estudios" },
   { title: "Acerca de mí", url: "/acerca-de-mi" },
   { title: "Cosas personales", url: "/cosas-personales" },
@@ -30,15 +30,15 @@ const social = [
   {
     name: "WhatsApp",
     icon: WhatsAppIcon,
-    url: "https://api.whatsapp.com/send?phone=573153838758",
+    url: "https://api.whatsapp.com/send?phone=573004596117",
   },
 
   {
     name: "LinkedIn",
     icon: LinkedInIcon,
-    url: "https://www.linkedin.com/in/juan-camilo-muñoz-lópez-ba287b1b4/",
+    url: "https://www.linkedin.com/in/jean-carlo-herrera-delgado-24273b207/",
   },
-  { name: "GitHub", icon: GitHubIcon, url: "https://github.com/Juancml1913" },
+  { name: "GitHub", icon: GitHubIcon, url: "https://github.com/JeanCarloH" },
 ];
 
 let theme = createTheme();
@@ -79,7 +79,7 @@ export default function Blog() {
             <Routes>
               <Route
                 exact
-                path="/"
+                path="/portafolio"
                 element={<Portafolio handleOpen={handleOpen} />}
               />
               <Route
@@ -107,7 +107,7 @@ export default function Blog() {
                     <Grid item>
                       <ImageListItem
                         sx={{
-                          width: { sm: 400, md: 600 },
+                          width: { sm: 400, md: 200 },
                           height: { sm: 400, md: 600 },
                         }}
                       >
@@ -121,7 +121,7 @@ export default function Blog() {
           </main>
         </Container>
         <Footer
-          title="Gracias por visitar mi blog 😎👍"
+          title="Gracias por visitar mi blog "
           description="Este sitio web fue desarrollado con ReactJs"
           social={social}
         />

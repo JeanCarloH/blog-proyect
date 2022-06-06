@@ -1,15 +1,16 @@
 import { Avatar, Box, Grid, Paper, Typography } from "@mui/material";
-import PhotoAvatar from "../assets/avatar.jpg";
+//import PhotoAvatar from "../assets/avatar.jpg";
 import BasicCard from "./BasicCard";
 import BootstrapLogo from "../assets/skills/bootstrap.png";
 import CssLogo from "../assets/skills/css.png";
 import HtmlLogo from "../assets/skills/html.png";
 import JavaLogo from "../assets/skills/java.png";
-import JqueryLogo from "../assets/skills/jquery.png";
+//import JqueryLogo from "../assets/skills/jquery.png";
 import JsLogo from "../assets/skills/js.png";
-import PhpLogo from "../assets/skills/php.png";
+//import PhpLogo from "../assets/skills/php.png";
 import GithubLogo from "../assets/skills/github.png";
 import ReactLogo from "../assets/skills/react.png";
+import PythonLogo from "../assets/skills/python.png";
 
 function AcercaDeMi() {
   const skills = [
@@ -17,18 +18,19 @@ function AcercaDeMi() {
     { url: CssLogo, title: "CSS 3" },
     { url: JsLogo, title: "JAVASCRIPT" },
     { url: BootstrapLogo, title: "BOOTSTRAP" },
-    { url: JqueryLogo, title: "JQUERY" },
-    { url: PhpLogo, title: "PHP" },
+    //{ url: JqueryLogo, title: "JQUERY" },
+    //{ url: PhpLogo, title: "PHP" },
     { url: JavaLogo, title: "JAVA" },
     { url: GithubLogo, title: "GITHUB" },
     { url: ReactLogo, title: "REACT JS" },
+    { url: PythonLogo, title: "Python" },
   ];
 
   const post = {
-    title: "Juan Camilo Muñoz López",
+    title: "Jean Carlo Herrera Delgado",
     description:
       "A continuación se podrán ver una pequeña descripción acerca de mí.",
-    image: "https://placeimg.com/1080/1620/tech",
+    image: "logoPersonal/logonuevo.png",
     imageText: "main image description",
     linkText: "Continue reading…",
   };
@@ -75,7 +77,7 @@ function AcercaDeMi() {
             <Box
               sx={{
                 position: "relative",
-                p: { xs: 3, md: 6 },
+                p: { xs: 3, md: 8 },
                 pr: { md: 0 },
               }}
             >
@@ -95,13 +97,13 @@ function AcercaDeMi() {
                 paragraph
               >
                 {post.description}
-              </Typography>
+              </Typography> 
             </Box>
           </Grid>
           <Grid item md={4}>
             <Avatar
-              alt="Juan Camilo Muñoz"
-              src={PhotoAvatar}
+              alt="Jean Carlo Herrera"
+              //src={PhotoAvatar}
               sx={{
                 width: { xs: 100, sm: 100, md: 200 },
                 height: { xs: 100, sm: 100, md: 200 },
@@ -111,11 +113,9 @@ function AcercaDeMi() {
         </Grid>
       </Paper>
       <Typography variant="body1" gutterBottom>
-        Soy responsable, creativo y con muy buena disposición para cualquier
-        tarea. Tengo dos años de experiencia en mi campo trabajando de forma
-        freelancer y me encuentro cursando el septimo semestre de ingeniería de
-        sistemas en la Universidad Nacional de Colombia. El trabajo y la
-        disciplina es lo que me mueven para ser cada día un mejor profesional.
+      Estudiante de Ingeniería con bases fundamentales en diferentes lenguajes de programación 
+      tales como java, C# (Unity), Python(Pandas, Numpy), Html, Css, Bootstrap y además con 
+      conocimientos fundamentales de React.Js
       </Typography>
       <Typography variant="h4" sx={{ textAlign: "center" }}>
         Skills

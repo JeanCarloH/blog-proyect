@@ -6,6 +6,7 @@ import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import Link from '@mui/material/Link';
 
 function FeaturedPost({ post, handleOpen }) {
   return (
@@ -25,6 +26,9 @@ function FeaturedPost({ post, handleOpen }) {
             <Typography variant="subtitle1" paragraph>
               {post.description}
             </Typography>
+            {post.url &&(
+              <Link target="_blank" href="/CV/Jean_Herrera_CV.docx" download="JeanHerrera_CV" >Descargar</Link>
+            )}
           </CardContent>
           <CardMedia
             component="img"
